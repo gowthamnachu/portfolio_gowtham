@@ -1,0 +1,152 @@
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.navbar-scrolled {
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-links-desktop {
+  display: none;
+  gap: 3rem;
+}
+
+.nav-link {
+  color: #cccccc;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-menu-btn {
+  display: block;
+  background: none;
+  border: none;
+  color: #cccccc;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-menu-btn:hover {
+  color: #ffffff;
+}
+
+.nav-mobile {
+  background: rgba(0, 0, 0, 0.98);
+  backdrop-filter: blur(10px);
+}
+
+.nav-mobile-content {
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-mobile-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #cccccc;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.nav-mobile-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Scroll to Top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  background: #ffffff;
+  color: #000000;
+  padding: 0.75rem;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 6px 30px rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 768px) {
+  .nav-links-desktop {
+    display: flex;
+  }
+  
+  .nav-menu-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo {
+    font-size: 1.5rem;
+  }
+  
+  .scroll-top-btn {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.6rem;
+  }
+}
